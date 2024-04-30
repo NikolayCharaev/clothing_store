@@ -2,7 +2,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>product id</div>
+    <div>products id</div>
   )
 }
 
