@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="footer container">
       <div className="top">
         <div className="item">
           <h1>Categories</h1>

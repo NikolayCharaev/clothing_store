@@ -1,0 +1,19 @@
+.slider {
+  // display: flex;
+  // justify-content: center;
+
+  &__container {
+    width: 1920px;
+    margin: 0 auto;
+  }
+}
+
+swiper-container::part(button-prev),
+swiper-container::part(button-next) {
+  width: 40px;
+  height: 40px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/10829/10829591.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
