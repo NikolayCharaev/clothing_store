@@ -1,19 +1,18 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import AppProvider from "@/components/AppProvider/AppProvider";
-import Navbar from "@/components/Navbar/Navbar";
-import Slider from "@/components/Slider/Slider";
-import Footer from "@/components/Footer/Footer";
-import FeaturedProducts from "@/components/FeaturedProducts/FeaturedProducts";
+import AppProvider from '@/components/AppProvider/AppProvider';
+import Slider from '@/components/Slider/Slider';
+import FeaturedProducts from '@/components/FeaturedProducts/FeaturedProducts';
+import Categories from '@/components/Categories/Categories';
+import Contact from '@/components/Contact/Contact';
 export default function Home() {
   return (
-  <>
+    <>
       <AppProvider>
-      <Navbar />
         <Slider />
-        <FeaturedProducts/>
-        <Footer />
+        <FeaturedProducts type="featured" />
+        <Categories />
+        <FeaturedProducts type="trending" />
+        <Contact />
       </AppProvider>
-  </>
+    </>
   );
 }

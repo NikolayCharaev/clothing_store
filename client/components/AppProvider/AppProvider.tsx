@@ -16,7 +16,6 @@ const AppProvider: FC<IAppProviderProps> = ({ children }) => {
   return (
     <div className="app">
       {children}
-
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     </div>
   );
