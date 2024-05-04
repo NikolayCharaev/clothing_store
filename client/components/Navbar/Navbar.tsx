@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+import { useState } from 'react';
 
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import SearchIcon from '@mui/icons-material/Search';
@@ -11,7 +12,10 @@ import enIcon from '@/public/img/en.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import './styles.scss';
+import Basket from '../Basket/Basket';
+
 const Navbar = () => {
+  const [open, setOpen] = useState<boolean>(false);
   return (
     <div className="navbar ">
       <div className="container">
@@ -26,13 +30,19 @@ const Navbar = () => {
               <KeyboardArrowDownIcon />
             </div>
             <div className="item">
-              <Link className="link"  href="/products/1">Women</Link>
+              <Link className="link" href="/products/1">
+                Women
+              </Link>
             </div>
             <div className="item">
-              <Link className="link"  href="/products/2">Men</Link>
+              <Link className="link" href="/products/2">
+                Men
+              </Link>
             </div>
             <div className="item">
-              <Link className="link"  href="/products/3">Children</Link>
+              <Link className="link" href="/products/3">
+                Children
+              </Link>
             </div>
           </div>
           <div className="center">
@@ -70,7 +80,7 @@ const Navbar = () => {
               <AccountBoxIcon />
               <FavoriteIcon />
 
-              <div className="cartIcon">
+              <div className="cartIcon" onClick={() => setOpen((prev) => !prev)}>
                 <ShoppingBasketIcon />
                 <span>0</span>
               </div>
@@ -78,6 +88,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      {open && <Basket />}
     </div>
   );
 };
