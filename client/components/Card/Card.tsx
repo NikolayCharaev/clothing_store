@@ -16,8 +16,8 @@ const Card: FC<ICardProps> = ({ item }) => {
       <div className="card">
         <div className="image">
           {item?.isNew && <span>New Season</span>}
-          <Image width={300} height={600} src={item.img} alt="" className="mainImg" />
-          <Image width={300} height={600} src={item.img2} alt="" className="secondImg" />
+          <Image width={300} height={600} src={process.env.NEXT_PUBLIC_APP_UPLOAD_URL + item.img?.data?.attributes.url} alt="" className="mainImg" />
+          <Image width={300} height={600} src={process.env.NEXT_PUBLIC_APP_UPLOAD_URL + item.img2?.data?.attributes.url} alt="" className="secondImg" />
         </div>
         <h2>{item?.title}</h2>
         <div className="prices">
